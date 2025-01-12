@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZTTLL</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: "仿宋", serif;
+            font-size: 22px;
+            display: flex;
+            flex-direction: column; /* 改为列方向布局 */
+            justify-content: center;
+            align-items: center;
+        }
+        .fixed-top-left {
+            position: fixed;
+            top: 10px; /* 根据需要调整距离顶部的距离 */
+            left: 10px; /* 根据需要调整距离左侧的距离 */
+            color: white;
+            font-family: "宋体", serif; /* 指定宋体字体，如果系统中没有则回退到serif系列 */
+            font-size: 36px; /* 根据需要调整字体大小 */
+            background-color: rgba(0, 0, 0, 0.5); /* 可选：添加半透明背景以增加可读性，如果不希望背景则设置为transparent */
+            padding: 5px 10px; /* 可选：增加内边距以提高可读性 */
+            border-radius: 5px; /* 可选：增加圆角 */
+            z-index: 1000; /* 确保此元素位于其他内容之上 */
+        }
+
+        /* 移除 overflow: hidden; 以允许页面滚动 */
+        body {
+            background: linear-gradient(45deg, #007bff, #28a745, #6f42c1);
+            background-size: 600% 600%;
+            animation: gradientAnimation 20s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .centered-text {
+            color: white;
+            font-size: 4em;
+            text-align: center;
+            margin-bottom: 2em; /* 为下面的链接容器留出空间 */
+        }
+        
+
+        .link-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* 从顶部开始排列链接 */
+            width: 100%; /* 可选：使容器宽度占满整个视口 */
+            max-width: 600px; /* 可选：限制最大宽度以提高可读性 */
+            margin: 0 auto; /* 可选：使容器水平居中 */
+            text-align: center;
+            padding: 1em; /* 可选：为链接添加一些内边距 */
+            box-sizing: border-box; /* 包括内边距和边框在内计算元素总宽度 */
+        }
+
+        .centered-link {
+            margin: 10px 0;
+            color: rgb(0, 252, 189);
+            text-decoration: none;
+            font-size: 2em;
+        }
+
+        .centered-link:hover {
+            color: #2b055c;
+        }
+    </style>
+</head>
+<body>
+    <div class="fixed-top-left">文件列表</div>
+    <!-- 添加更多内容以测试滚动 -->
+    <div class="link-container">
+        <a href="https://github.com/br574/BR574.github.io/releases/download/e/Client.7z" class="centered-link">Minecraft客户端</a>
+        <a href="https://github.com/br574/BR574.github.io/releases/download/e/caaaaaa.exe" class="centered-link">PCL2启动器</a>
+        <a href="https://github.com/br574/BR574.github.io/releases/download/e/steamcommunity_302_V12.1.45.zip" class="centered-link">steamcommunity_302</a>
+        <!-- 可以继续添加更多链接或内容 -->
+    </div>
+    <!-- 为了测试滚动，我们添加了一个很大的div来占据额外空间 -->
+    <div style="height: 2000px;"></div>
+</body>
+</html>
